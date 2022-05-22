@@ -1,44 +1,12 @@
-## Documentation for setup
+## WiSe20 BachelorProject @Hochschule Fulda
 
-### Create database user with password
-* Login to **mysql**:
+During the course "Bachelorprojekt" at Hochschule Fulda a team of 4 students inclunding myself created a basic webshop. The idea was a simple clone of an online shop like Amazon or Ebay. People can register and then search for products or sell something themselves. 
 
-```console
-  sudo mysql
-```
-* Create a new user on localhost with password:
-```console
-  CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
-```
+## Techstack
 
-```console
-  GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
-```
-Replace "newuser" with desired username and "password" with desired password:
+Backend: PHP
 
-* Reload all the privileges to take effect:
-```console
-  FLUSH PRIVILEGES;
-```
+Frontend: PHP
 
-### Install mysql-server
-```console
-sudo apt install mysql-server
-```
+Visuals: css
 
-### Grant root privileges for user
-```console
-  visudo
-  ```
-* Enter the following under root user: "Dave ALL=(ALL:ALL)ALL"
-* Save changes with **Ctrl-X**, **Y**, **Enter**
-
-### Setup HTTPS
-
-### Import database dump
-```console
-sudo mysql test_db < /home/Dave/TeamProject-SoSe21-TeamB/flask_server/Database.sql
-```
-
-### Credentials
-For accessing database, see **db_config.yaml**
